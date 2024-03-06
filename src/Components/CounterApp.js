@@ -6,13 +6,15 @@ import { increase,decrease,reset } from "../redux/action/counterAction";
 
 
 let CounterApp=()=>{
-let count=useSelector((state)=>state.count);
+let count=useSelector((state)=>state.counter);
+// console.log(count);
 let dispatch=useDispatch()
 return(
     <div>
-<button onClick={}>  Increase</button>
-<button>DECREASE</button>
-<button>Reset</button>
+        <h4>count is   {count}</h4>
+<button onClick={()=>dispatch(increase())}>  Increase</button>
+<button onClick={()=>dispatch(decrease())}>DECREASE</button>
+<button onClick={()=>dispatch(reset())}>Reset</button>
 
     </div>
 )

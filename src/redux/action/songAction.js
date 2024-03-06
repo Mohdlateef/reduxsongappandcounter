@@ -10,3 +10,4 @@ const clickedSong=(value)=>{
         payload:value,
     }
 }
+export default clickedSong
